@@ -1,19 +1,25 @@
 import AddToCart from "./AddToCart";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <>
- <header>
-    <div className="logo" >My Shop</div>
-    <nav>
+    <header>
+      <div className="logo">My Shop</div>
+
+      <nav>
         <ul>
-            <li href="#">Home</li>
-            <li href="#">Products</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+
+          <li>
+            <Link to="/cart">Cart</Link>
+          </li>
         </ul>
-    </nav>
-    <AddToCart/>
- </header>
-    </>
+      </nav>
+
+      <AddToCart />
+    </header>
   );
 };
 
